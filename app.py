@@ -16,13 +16,13 @@ login_manager.login_view = "login"
 
 @login_manager.user_loader
 def load_user(user_id):
-  return Doctor.query.get(int(user_id))
+    return Doctor.query.get(int(user_id))
 
-  @app.route("/")
-  def home():
-  return "Homeopathy Repertory Platform - Login Required"
+@app.route("/")
+def home():
+    return "Homeopathy Repertory Platform - Login Required"
 
 if __name__ == "__main__":
-with app.app_context():
-  db.create_all()
-  app.run(debug=True)
+    with app.app_context():
+        db.create_all()
+    app.run(debug=True)
