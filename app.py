@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from models import db, Doctor
+import os
 from flask_login import LoginManager
 
 app = Flask(__name__)
