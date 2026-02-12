@@ -62,5 +62,5 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLALchemy(app)
 
-withapp.app_context():
+with app.app_context():
     db.create_all()
