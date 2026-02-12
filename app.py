@@ -60,7 +60,7 @@ app.config["SECRET_KEY"] = "supersecret"
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
-db = SQLALchemy(app)
+db = SQLAlchemy(app)
 
 with app.app_context():
     db.create_all()
