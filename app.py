@@ -30,7 +30,6 @@ def home():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        name = request.form.get("name")
         email = request.form.get("email")
         password = request.form.get("password")
 
@@ -42,7 +41,6 @@ def register():
         hashed_password = generate_password_hash(password)
 
         new_doctor = Doctor(
-            name=name,
             email=email,
             password=hashed_password
         )
