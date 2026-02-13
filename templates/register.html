@@ -6,6 +6,14 @@
 <body>
     <h2>Register</h2>
 
+    {% with messages = get_flashed_messages() %}
+      {% if message %}
+        {% for message in message %}
+          <p style="color:red;">{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
     <form method="POST">
         <label>Username:</label>
         <input type="text" name="username">
