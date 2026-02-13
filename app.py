@@ -5,7 +5,7 @@ app = Flask(__name__)
 app.secret_key = "secretkey"
 
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///doctor.db"
-app.config["SQLALCHEMY_MODIFICATIONS"] = fALSE
+app.config["SQLALCHEMY_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
 from models import Doctor
