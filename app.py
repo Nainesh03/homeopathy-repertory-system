@@ -33,6 +33,6 @@ def register():
             flash("Registration successfull! Please login.")
             return redirect(url_for("login"))
 
-return render_template("register.html")
+    return render_template("register.html")
 
        
