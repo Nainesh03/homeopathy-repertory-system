@@ -1,6 +1,14 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
-from yourapp import app, db
-from yourapp.models import Doctor
+from flask_sqlalchemy import SQLAlchemy
+
+app = Flask(__name__)
+app.secret_key = "secretkey"
+
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///doctor.db"
+app.config["SQLALCHEMY_MODIFICATIONS"] = fALSE
+
+db = SQLAlchemy(app)
+from models import Doctor
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
